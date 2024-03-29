@@ -22,6 +22,13 @@
   position: fixed;
   top: 0;
   z-index: 999;
+  transition: background-color 600ms;
+  height: 75px;
+  width: 100%;
+  background-color: #ffc017;
+  border-bottom: 1px solid #191919;
+  display: flex;
+  justify-content: center;
 }
 
 .header-container {
@@ -29,7 +36,6 @@
   font-weight: 400;
   width: 80%;
   height: 75px;
-  margin-inline: auto;
   align-items: center;
 }
 .header-container ul li {
@@ -49,13 +55,9 @@
   padding: 15px 20px;
   border: 1px solid transparent;
   border-radius: 30px;
+  cursor: pointer;
 }
-.nav-container {
-  height: 75px;
-  width: 100%;
-  background-color: #ffc017;
-  border-bottom: 1px solid #191919;
-}
+
 .scrolled {
   background-color: white;
 }
@@ -68,9 +70,22 @@
 
 /*START Section 1*/
 .m-container {
-  height: 450px;
+  height: 425px;
   background-color: #ffc017;
+  margin-top: 76px;
   border-bottom: 1px solid #191919;
+  position: relative;
+}
+
+#right-container {
+  max-height: 425px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#right-container svg {
+  max-height: 425px;
+  transition: all 1s;
 }
 
 .main-container {
@@ -103,14 +118,15 @@
   font-size: 1.1em;
   padding: 10px 15px;
   border-radius: 30px;
+  cursor: pointer;
 }
 /*END Section 1*/
 
 /*START Section 2*/
 .t-container {
-  height: 375px;
   border-bottom: 2px solid rgb(242, 242, 242);
   padding-top: 40px;
+  padding-bottom: 40px;
 }
 .trending-container {
   width: 80%;
@@ -134,6 +150,7 @@
   gap: 20px;
   font-family: "Roboto", sans-serif;
   position: relative;
+  cursor: pointer;
 }
 .card-number {
   font-weight: 500;
@@ -212,6 +229,7 @@
 }
 #photo-next-to-article img {
   width: 80%;
+  cursor: pointer;
 }
 
 .article-photo-container {
@@ -226,7 +244,9 @@
 .discover-buttons {
   flex-wrap: wrap;
   margin-top: 20px;
+  padding-bottom: 30px;
   gap: 10px;
+  border-bottom: 1px solid rgb(242, 242, 242);
 }
 .discover h3 {
   font-family: "Roboto", sans-serif;
@@ -239,7 +259,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   border: 1px solid transparent;
-
+  cursor: pointer;
   border-radius: 20px;
   padding: 13px 10px;
 }
@@ -260,4 +280,76 @@
   top: 90px;
 }
 /*END Section 3*/
+@media screen and (min-width: 300px) and (max-width: 767px) {
+  .header-container {
+    width: 90%;
+  }
+  .main-container {
+    width: 90%;
+  }
+  #right-container {
+    width: 0%;
+  }
+  .main-container h1 {
+    font-size: 5em;
+  }
+  .m-container {
+    margin-top: 76px;
+  }
+  .trending-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .header-container li:not(li:last-of-type) {
+    display: none;
+  }
+  .card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .card-container {
+    align-items: flex-end;
+  }
+  .article-container {
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+  .article-container .discover {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #photo-next-to-article {
+    height: 130px;
+  }
+  #photo-next-to-article img {
+    width: 200px;
+    height: 130px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #right-container {
+    display: none;
+  }
+
+  .m-container {
+    margin-top: 76px;
+  }
+
+  .article-container {
+    flex-direction: column-reverse;
+  }
+  .article-container .discover {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .article-container .discover ul {
+    margin-top: 50px;
+  }
+  .card {
+    width: 50%;
+  }
+}
+
 /*END OF MAIN*/
