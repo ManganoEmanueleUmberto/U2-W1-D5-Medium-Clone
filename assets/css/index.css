@@ -255,5 +255,9 @@
   margin-left: 10px;
   margin-bottom: 10px;
 }
+.sticky {
+  position: sticky;
+  top: 90px;
+}
 /*END Section 3*/
 /*END OF MAIN*/

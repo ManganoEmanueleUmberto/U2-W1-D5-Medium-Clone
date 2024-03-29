@@ -373,30 +373,32 @@
             </div>
 
             <div class="discover">
-              <h3>Discover more of what matters to you</h3>
-              <div class="flex discover-buttons">
-                <button>Programming</button>
-                <button>Data Science</button>
-                <button>Technology</button>
-                <button>Self Improvement</button>
-                <button>Writing</button>
-                <button>Relationships</button>
-                <button>Machine Learning</button>
-                <button>Productivity</button>
-                <button>Politics</button>
+              <div class="sticky">
+                <h3>Discover more of what matters to you</h3>
+                <div class="flex discover-buttons">
+                  <button>Programming</button>
+                  <button>Data Science</button>
+                  <button>Technology</button>
+                  <button>Self Improvement</button>
+                  <button>Writing</button>
+                  <button>Relationships</button>
+                  <button>Machine Learning</button>
+                  <button>Productivity</button>
+                  <button>Politics</button>
+                </div>
+                <hr />
+                <ul>
+                  <li>Help</li>
+                  <li>Status</li>
+                  <li>Writers</li>
+                  <li>Blog</li>
+                  <li>Careers</li>
+                  <li>Privacy</li>
+                  <li>Terms</li>
+                  <li>About</li>
+                  <li>Knowable</li>
+                </ul>
               </div>
-              <hr />
-              <ul>
-                <li>Help</li>
-                <li>Status</li>
-                <li>Writers</li>
-                <li>Blog</li>
-                <li>Careers</li>
-                <li>Privacy</li>
-                <li>Terms</li>
-                <li>About</li>
-                <li>Knowable</li>
-              </ul>
             </div>
           </div>
         </div>
@@ -408,12 +410,12 @@
       document.addEventListener("scroll", () => {
         const navbar = document.querySelector(".nav-container");
         const button = document.querySelector(".header-container button");
-        if (window.scrollY > 0) {
+        if (window.scrollY > 150) {
           navbar.classList.add("scrolled");
           button.id = "btn-change";
         } else {
           navbar.classList.remove("scrolled");
-          button.id = "btn-change";
+          button.id = "";
         }
       });
     </script>
