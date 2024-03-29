@@ -27,7 +27,7 @@
 .header-container {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  width: 60%;
+  width: 80%;
   height: 75px;
   margin-inline: auto;
   align-items: center;
@@ -76,7 +76,7 @@
 .main-container {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  width: 60%;
+  width: 80%;
   height: 450px;
   flex-direction: column;
   margin-inline: auto;
@@ -113,7 +113,7 @@
   padding-top: 40px;
 }
 .trending-container {
-  width: 60%;
+  width: 80%;
   height: 100%;
   margin-inline: auto;
 }
@@ -174,12 +174,12 @@
   padding-top: 80px;
 }
 .article-container {
-  width: 60%;
+  width: 80%;
   margin-inline: auto;
   margin-bottom: 40px;
 }
 .article-container .article {
-  width: 60%;
+  width: 80%;
 }
 .article-container .discover {
   width: 40%;
